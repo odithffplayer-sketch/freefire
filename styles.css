@@ -1,0 +1,41 @@
+/* General Fast-Load Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f4f9; color: #333; line-height: 1.6; }
+
+/* Header & Nav */
+header { background: #ffaa00; color: #111; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
+nav a { color: #111; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+/* Main Content Grid */
+.container { padding: 2rem 5%; max-width: 1200px; margin: auto; }
+h1 { margin-bottom: 1.5rem; color: #222; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.card h2 a { text-decoration: none; color: #d32f2f; font-size: 1.2rem; }
+.card p { margin-top: 10px; font-size: 0.95rem; color: #555; }
+
+/* Article Page Specifics */
+.article-content { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.article-content h1 { color: #d32f2f; }
+.article-content h2 { margin-top: 1.5rem; color: #333; }
+
+/* === HIGH CONVERSION SOCIAL POPUP BAR === */
+.social-popup { position: fixed; bottom: -100px; left: 0; width: 100%; background: rgba(0, 0, 0, 0.9); border-top: 3px solid #ffaa00; z-index: 1000; transition: bottom 0.5s ease-in-out; }
+.social-popup.show { bottom: 0; }
+.popup-content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px; text-align: center; position: relative; max-width: 800px; margin: auto; }
+@media(min-width: 768px) { .popup-content { flex-direction: row; justify-content: space-between; } }
+.popup-text { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
+@media(min-width: 768px) { .popup-text { margin-bottom: 0; } }
+
+/* Glowing Pulse Button (To make them want to click) */
+.pulse-btn { background: #ffaa00; color: #111; padding: 10px 25px; text-decoration: none; font-weight: 900; font-size: 1.1rem; border-radius: 5px; animation: pulse 1.5s infinite; text-transform: uppercase; letter-spacing: 1px; }
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 170, 0, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 170, 0, 0); }
+}
+.close-btn { position: absolute; top: 5px; right: 15px; color: #aaa; font-size: 24px; cursor: pointer; }
+.close-btn:hover { color: #fff; }
+</footer> { text-align: center; padding: 1.5rem; background: #222; color: #bbb; margin-top: 2rem; }
