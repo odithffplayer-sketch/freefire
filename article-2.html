@@ -73,3 +73,163 @@ Spend 10 minutes in Training Ground with your sensitivity. Practice dragging fro
 <p>Master this and you'll see more headshots, more Booyahs, and faster rank push in Clash Squad.</p>
 
 <p>What sensitivity are you using right now? Drop it in the comments and I'll tell you if you should increase or decrease it.</p>
+<style>
+/* SOCIAL BAR - Niche chipka hua */
+.social-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff4500, #ff8c00);
+  color: white;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999;
+  box-shadow: 0 -4px 15px rgba(255,69,0,0.5);
+  animation: slideUp 0.8s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.social-bar p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+.social-bar a {
+  background: #fff;
+  color: #ff4500;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+ 0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+ 100% { transform: scale(1); }
+}
+.social-bar .close-bar {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* POPUP AD - Beech me */
+.ad-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.ad-box {
+  background: #121212;
+  border: 3px solid #ff4500;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,69,0,0.7);
+  position: relative;
+  animation: pop 0.4s ease;
+}
+@keyframes pop {
+  from { transform: scale(0.7); }
+  to { transform: scale(1); }
+}
+.ad-box img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.ad-box h3 {
+  color: #ff4500;
+  margin: 10px 0;
+  font-size: 22px;
+}
+.ad-box p {
+  color: #ddd;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.ad-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4500, #ff8c00);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  animation: glow 2s infinite;
+}
+@keyframes glow {
+ 0% { box-shadow: 0 0 5px #ff4500; }
+ 50% { box-shadow: 0 0 20px #ff4500; }
+ 100% { box-shadow: 0 0 5px #ff4500; }
+}
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  cursor: pointer;
+}
+</style>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar" id="socialBar">
+  <p>🔥 Free Fire Free Diamonds Trick!</p>
+  <a href="https://your-ad-link.com" target="_blank">Claim Now</a>
+  <span class="close-bar" onclick="document.getElementById('socialBar').style.display='none'">×</span>
+</div>
+
+<!-- POPUP AD -->
+<div class="ad-popup" id="adPopup">
+  <div class="ad-box">
+    <span class="close-popup" onclick="document.getElementById('adPopup').style.display='none'">×</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Gift">
+    <h3>Get 500 Free Diamonds!</h3>
+    <p>Limited Time Offer! Click below and get free rewards in Free Fire. Only 100 users left!</p>
+    <a href="https://your-ad-link.com" target="_blank" class="ad-btn">CLAIM FREE REWARD</a>
+  </div>
+</div>
+
+<script>
+// Popup 3 second baad khulega
+window.onload = function() {
+  setTimeout(function() {
+    document.getElementById('adPopup').style.display = 'flex';
+  }, 3000); // 3000ms = 3 second
+
+  // 30 second me 1 baar fir se dikhao
+  setInterval(function() {
+    document.getElementById('adPopup').style.display = 'flex';
+  }, 30000); // 30000ms = 30 second
+}
+
+// Popup ke bahar click karne se band ho jaye
+document.getElementById('adPopup').addEventListener('click', function(e) {
+  if(e.target == this) {
+    this.style.display = 'none';
+  }
+})
+  </script>
